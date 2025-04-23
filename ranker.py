@@ -328,7 +328,7 @@ class Ranker:
                 fg="#666666"
             ).pack(side=tk.RIGHT)
         
-        # Botão para Persistência de Resultados (Requisito R8)
+        # Botão para salvar
         save_btn = tk.Button(
             result_frame,
             text="Salvar Resultado",
@@ -340,7 +340,21 @@ class Ranker:
             activebackground='#303030',
             command=self.save_results
         )
-        save_btn.pack(pady=20)
+        save_btn.pack(pady=(20, 10))
+
+        # Botão para voltar ao início
+        restart_btn = tk.Button(
+            result_frame,
+            text="Voltar ao Início",
+            width=16,
+            font=("Helvetica", 12),
+            relief=tk.FLAT,
+            bg='#404040',
+            fg='white',
+            activebackground='#303030',
+            command=lambda: selector.show()
+        )
+        restart_btn.pack(pady=(0, 20))
 
 # Fluxo principal com Seleção de Jogos (Requisito R1)
 if __name__ == '__main__':
