@@ -5,7 +5,7 @@ import itertools
 import math
 import csv
 import os
-from datetime import datetime 
+from datetime import datetime
 
 # Requisito R1: Seleção de jogos (entre 2 e 10 antes de iniciar o rankeamento)
 class GameSelector:
